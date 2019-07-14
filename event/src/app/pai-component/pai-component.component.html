@@ -1,0 +1,19 @@
+<p>pai-component works!</p>
+<p>Valores  do pai</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Sobrenome</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let p of familia">
+            <td>{{p.nome}}</td>
+            <td>{{p.sobrenome}}</td>
+            
+        </tr>
+    </tbody>
+</table>
+<app-filho [recebeFamilia]="familia" (respostaFamilia)="receberFeedBack($event)"></app-filho>

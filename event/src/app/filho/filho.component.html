@@ -1,0 +1,18 @@
+<button (click) ="feedback()">Enviar para o pai </button>
+<p>Valores vindos do pai</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Sobrenome</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let p of recebeFamilia">
+            <td>{{p.nome}}</td>
+            <td>{{p.sobrenome}}</td>
+            
+        </tr>
+    </tbody>
+</table>

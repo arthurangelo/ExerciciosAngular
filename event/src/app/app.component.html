@@ -1,0 +1,24 @@
+<app-pai-component></app-pai-component>
+<h1>Produtos</h1>
+<table class="table">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>NOME</th>
+      <th>PRECO</th>
+      <th>ESTOQUE</th>
+
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let p of produtos">
+      <td>{{p.id}}</td>
+      <td>{{p.nome}}</td>
+      <td>{{p.preco}}</td>
+      <td>{{p.stoque}}</td>
+      <td>
+        <app-stock-status [productId]='p.id' [stock]='p.stoque' (stockValueChange)='changeStockValue($event)'>
+        </app-stock-status>
+    </tr>
+  </tbody>
+</table>
